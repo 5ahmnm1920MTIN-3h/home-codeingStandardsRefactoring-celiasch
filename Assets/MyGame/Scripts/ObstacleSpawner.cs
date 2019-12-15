@@ -16,12 +16,12 @@ public class ObstacleSpawner : MonoBehaviour
         }
     }
 
-    void Start()
+    private void Start()
     {
         StartCoroutine("Spawn");
     }
 
-    IEnumerator Spawn()
+    public IEnumerator Spawn()
     {
         float waitTime = 1f;
         yield return new WaitForSeconds (waitTime);
@@ -34,7 +34,7 @@ public class ObstacleSpawner : MonoBehaviour
         }
     }
 
-    void SpawnObstacle()
+    public void SpawnObstacle()
     {
         int random = Random.Range(0,obstacles.Length);
         Instantiate(obstacles[random],transform.position,Quaternion.identity);
