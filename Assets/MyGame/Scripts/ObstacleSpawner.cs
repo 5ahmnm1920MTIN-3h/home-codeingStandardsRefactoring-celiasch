@@ -7,6 +7,7 @@ public class ObstacleSpawner : MonoBehaviour
     public GameObject[] obstacles;
     public bool gameOver = false;
     public float minSpawnTime, maxSpawnTime;
+    public float waitTime;
 
     private void Awake()
     {
@@ -23,7 +24,6 @@ public class ObstacleSpawner : MonoBehaviour
 
     public IEnumerator Spawn()
     {
-        float waitTime = 1f;
         yield return new WaitForSeconds (waitTime);
 
         while (!gameOver)
