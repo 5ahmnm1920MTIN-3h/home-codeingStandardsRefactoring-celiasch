@@ -4,7 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
     Animator anim;
-    float jumpForce;
+    public float jumpForce;
     bool grounded;
     bool gameOver = false;
 

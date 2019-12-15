@@ -3,7 +3,7 @@
 public class Obstacle : MonoBehaviour
 {
     Rigidbody2D rb;
-    [SerializeField] private float MoveSpeed;
+    public float MoveSpeed;
 
     private void Awake()
     {
