@@ -5,18 +5,11 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     [SerializeField] float jumpForce;
-    
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
     }
 
     // Update is called once per frame
@@ -28,10 +21,6 @@ public class PlayerController : MonoBehaviour
             {
                 jump();
             }
-
-
-
-
         }
     }
 
@@ -70,8 +59,4 @@ public class PlayerController : MonoBehaviour
             gameOver = SetGameOverTrue();
         }
     }
-
-
-
-
 }
