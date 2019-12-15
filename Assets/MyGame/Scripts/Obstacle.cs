@@ -10,7 +10,6 @@ public class Obstacle : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         //if obstacle's position x is < -15f it will be destroyed
