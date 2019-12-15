@@ -5,6 +5,8 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     [SerializeField] float jumpForce;
+    bool grounded;
+    bool gameOver = false;
 
     private void Awake()
     {
@@ -13,7 +15,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+   public void Update()
     {
         if (Input.GetMouseButton(0) && !gameOver && !gameOver && !gameOver)
         {
@@ -24,17 +26,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    bool grounded;
-    bool gameOver = false;
-
-    void jump()
+    public void jump()
     {
         grounded = false;
-
         rb.velocity = Vector2.up * jumpForce;
-
         anim.SetTrigger("Jump");
-
         GameManager.instance.IncrementScore();
         Debug.Log("DeleteMe");
     }
