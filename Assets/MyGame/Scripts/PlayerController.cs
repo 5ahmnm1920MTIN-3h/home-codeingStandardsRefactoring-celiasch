@@ -4,7 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
     Animator anim;
-    [SerializeField] float jumpForce;
+    float jumpForce;
     bool grounded;
     bool gameOver = false;
 
@@ -21,12 +21,12 @@ public class PlayerController : MonoBehaviour
         {
             if (grounded == true)
             {
-                jump();
+                Jump();
             }
         }
     }
 
-    public void jump()
+    public void Jump()
     {
         grounded = false;
         rb.velocity = Vector2.up * jumpForce;
