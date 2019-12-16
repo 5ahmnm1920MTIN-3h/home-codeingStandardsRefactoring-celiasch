@@ -4,6 +4,7 @@ public class Obstacle : MonoBehaviour
 {
     Rigidbody2D rb;
     public float MoveSpeed;
+    public float ObstaclePosition = 15f;
 
     private void Awake()
     {
@@ -13,12 +14,12 @@ public class Obstacle : MonoBehaviour
     void Update()
     {
         //if obstacle's position x is < -15f it will be destroyed
-        if(transform.position.x < -15f)
+        if(transform.position.x < -ObstaclePosition)
         {
             Destroy(gameObject);
         }
         //if obstacle's position x is < -15f it will be destroyed
-        if (transform.position.x > 15f)
+        if (transform.position.x > ObstaclePosition)
         {
             Destroy(gameObject);
         }
