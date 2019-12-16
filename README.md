@@ -9,11 +9,16 @@ Refactoring ist hier um einen Code/ein Programm zu verbessern, ohne etwas an sei
 ### Was sind die Refactoring-Schritte?
 Man definiert am Anfang einen Testcase. Diesen probiert man aus und sieht sich an wie der Prozess abläuft. Dann fängt man an einen Teil an seinem Code zu verbessern (Beispielsweise leere Code zeilen löschen oder Magic Values austauschen). Danach spielt man den gleichen Testcase durch und sieht sich an, ob der Prozess genau gleich abläuft wie vor dem Refactoring. Wenn das so ist, commited man die Änderung inklusiver klarer Commit Message (git commit -m"refactoring: ......) auf gitHub.  
 ### Prinzipien von guten Code?
-1.KISS (Keep it simple Stupid): Der Code sollte sehr einfach gehalten werden und nicht verkompliziert werden. Es sollte stets die einfachste Lösung gewählt werden.
-2.YAGNI (You aint gonna need it): Oft denkt man sich einige Funktionen aus welche man unbedingt noch in seinen Prozess einbauen will. Man sollte sich stets bewusst sein welche Funktionen man wirklich braucht. So stellt man sicher, dass man Zeit spart und das Projekt als ein Ganzes wirklich vorrangeht. 
+1. KISS (Keep it simple Stupid): Der Code sollte sehr einfach gehalten werden und nicht verkompliziert werden. Es sollte stets die einfachste Lösung gewählt werden.
+
+2. YAGNI (You aint gonna need it): Oft denkt man sich einige Funktionen aus welche man unbedingt noch in seinen Prozess einbauen will. Man sollte sich stets bewusst sein welche Funktionen man wirklich braucht. So stellt man sicher, dass man Zeit spart und das Projekt als ein Ganzes wirklich vorrangeht. 
+
 3. DRY(Dont repeat yourself): Vorallem durch Copy and Paste kann es passieren, dass unnötige Codestellen wiederholt werden. Das sollte vermieden werden um Wiederholungen auszuschließen und Speicher zu sparen. 
+
 4. SoC (Seperation of Concerns): Eine Codeeinheit sollte EINE klare Aufgabe haben. Die verschiedenen Belangen sollten klar getrennt sein, in eigenenen Codeeinheiten. 
-5.POLA (Principle of least Astonishment): Der User/die Userin sollte nie überrascht sein durch den Prozess/den Code. 
+
+5. POLA (Principle of least Astonishment): Der User/die Userin sollte nie überrascht sein durch den Prozess/den Code. 
+
 6. Information Hidding & Encapsulation: Das Prinzip beschreibt das Verbergen der inneren Struktur eines Objektes, damit auf dieses nur über seine öffentlichen Methoden und Attribute zugegriffen werden kann.
 ### Was versteht man unter Code Smell?
 Ein Code Smell sind Teile vom Code, welche man verbessern/löschen könnte da sie nicht ordentlich sind/eigentlich nicht gebraucht werden (Beispielsweise Magic Strings oder unnötige Debuge Logs). Bei Code Smells handelt es sich nicht um falschen Code. Cleaner Code sollte den gleichen Prozess erzielen, nur ordentlicher,reduzierter und in weniger Fehleranfälliger Form.
